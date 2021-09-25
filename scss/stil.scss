@@ -10,32 +10,77 @@ header {
   height: 3em;
   background-color: $tamnoplava;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: $tamnoplava;
-}
+nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $tamnoplava;
+  }
 
-li {
-  float: left;
-  padding-right: 30px;
-}
+  li {
+    float: left;
+    padding-right: 30px;
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
-
-li:first-child {
+nav ul li:first-child {
   padding-right: 100px;
   background-color: $orange;
   text-decoration: underline;
+}
+
+.backg {
+  background-image: url("../slike/intro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 70vh;
+  .naslov {
+    background-color: #f3f7f99c;
+    width: 40%;
+    text-align: center;
+    margin-left: 30%;
+
+    h1 {
+      font-size: 3em;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+}
+.sirc {
+  height: 4em;
+  width: 100%;
+  background-color: #f3f7f9;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    li {
+      display: inline-block;
+      border: 1px solid gray;
+      border-radius: 15px 15px 15px 15px;
+      padding: 5px 20px 5px 20px;
+      margin-top: 20px;
+      &:last-child {
+        margin-right: 200px;
+      }
+    }
+  }
 }

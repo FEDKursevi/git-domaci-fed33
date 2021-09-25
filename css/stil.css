@@ -10,34 +10,75 @@ header {
   background-color: #374249;
 }
 
-ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #374249;
 }
-
-li {
+nav li {
   float: left;
   padding-right: 30px;
 }
-
-li a {
+nav li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-li a:hover {
+nav li a:hover {
   text-decoration: underline;
 }
 
-li:first-child {
+nav ul li:first-child {
   padding-right: 100px;
   background-color: #f75311;
   text-decoration: underline;
+}
+
+.backg {
+  background-image: url("../slike/intro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+}
+.backg .naslov {
+  background-color: #f3f7f99c;
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+}
+.backg .naslov h1 {
+  font-size: 3em;
+}
+.backg .naslov h3 {
+  font-size: 1.5em;
+}
+
+.sirc {
+  height: 4em;
+  width: 100%;
+  background-color: #f3f7f9;
+}
+.sirc ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+.sirc ul li {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 15px 15px 15px 15px;
+  padding: 5px 20px 5px 20px;
+  margin-top: 20px;
+}
+.sirc ul li:last-child {
+  margin-right: 200px;
 }
 
 /*# sourceMappingURL=stil.css.map */
