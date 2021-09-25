@@ -44,3 +44,65 @@ li {
 .active {
     padding-left: 0%;
 }
+
+.sekcija_prva {
+    background-image: url('../slike/intro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dobrodosli {
+    background-color: $color_opacity;
+    display: inline-block;
+    padding: 1% 10%;
+    margin-top: 30%;
+    margin-bottom: 10%;
+    position: relative;
+    left: 30%;
+    
+    h1, p{
+        color: $color_bela;
+        text-align: center;
+        font-family: $roboto_font;
+    }
+}
+
+.opis {
+    width: 100%;
+    background-color: $color_bela;
+    height: 100px;
+}
+.kapsula {
+    border: $kapsula_border;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 0.5% 1%;
+    margin: 1.5%;
+    
+    &:first-child {
+        margin-left: 60%;
+    }
+    p {
+        font-family: $roboto_font;
+        color: $color_font;
+    }
+    &:hover {
+        color: $color_bela;
+        background-color: $color_siva;
+    }
+}
+
+.pozadina {
+    background-color: $color_pozadina_sekcija;
+}
+.slike_stana {
+    width: 70%;
+    margin: auto;
+}
+.box {
+    display: inline-block;
+    width: 100%;
+    margin: 4% 2%;
+    img {
+        margin: 1%;
+    }
+}
