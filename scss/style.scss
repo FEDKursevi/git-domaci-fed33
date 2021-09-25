@@ -1,0 +1,46 @@
+@import 'vars';
+@import 'mixin';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $color_siva;
+  }
+li {
+    float: left;
+    width: 7%;
+    
+    a {
+        display: inline-block;
+        color: $color_bela;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: $roboto_font;
+
+        &:hover {
+            text-decoration: underline;
+          }
+      }
+    &:first-child {
+        background-color: $color_narandzasta;
+        text-decoration: underline;
+        width: 20%;
+    }
+
+    img {
+        width: 40px;
+        padding: 1% 0% 1% 10%;
+        float: left;
+    }
+}
+.active {
+    padding-left: 0%;
+}
