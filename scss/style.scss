@@ -243,10 +243,11 @@ footer {
     }
 }
 
-/* mobilni */
-@media only screen and (max-width: 600px) {
-    
+.prices {
+    display: none;
 }
+
+
 
 /* tablet */
 @media only screen and (max-width: 992px) {
@@ -301,4 +302,91 @@ footer {
         margin: 2% 12%;
     }
 
+}
+
+/* mobilni */
+@media only screen and (max-width: 600px) {
+
+    .sekcija_prva {
+        background-image: none;
+        background-color: $color_siva;
+    }
+
+    .dobrodosli {
+        margin-top: 5%;
+        background-color: $color_siva;
+        padding: 1% 8%;
+    }
+
+    li{
+        width: 100%;
+        a{
+            display: block;
+        }
+        &:first-child {
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    .dobrodosli {
+        left: 2%;
+    }
+
+    .kapsula {        
+        &:first-child {
+            margin-left: 15%;
+        }
+    }
+
+    .box1 {
+        width: 100%;
+    }
+    .box2 {
+        width: 100%;
+    }
+    .box3 {
+        width: 100%;
+    }
+    .box4 {
+        width: 100%;
+    }
+    .box5 {
+        width: 100%;
+    }
+    .box6 {
+        width: 100%;
+    }
+
+    table {
+        display: none;
+    }
+
+    .prices {
+        display: block;
+        width: 30%;
+        text-align: center;
+        border: 2px solid $color_siva;
+        border-radius: 50px;
+        padding: 2% 5%;
+        margin: 4% auto;
+        &:hover{
+            background-color: $color_hover;
+            color: $color_font;
+        }
+    }
+
+    .mapa {
+        iframe {
+            width: 80%;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    }
+
+    form {
+        width: 90%;
+        margin: 2% 3%;
+    }
+    
 }
