@@ -84,3 +84,120 @@ nav ul li:first-child {
     }
   }
 }
+.sirc {
+  li:hover {
+    background-color: gray;
+    color: white;
+  }
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+  margin-left: 150px;
+  margin-right: 50px;
+  position: relative;
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: $siva1;
+    .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: left;
+    }
+  }
+}
+.column:hover .overlay {
+  opacity: 0.9;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.cene {
+  background-color: $siva2;
+}
+.pricing {
+  margin-top: 50px;
+  h1,
+  h3 {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+}
+table {
+  border: 1px solid black;
+  width: 50%;
+  border-collapse: collapse;
+  margin-left: 25%;
+  margin-bottom: 10%;
+  td {
+    border: 1px solid black;
+  }
+}
+
+.flex {
+  margin-left: 10%;
+  width: 50%;
+  float: left;
+}
+form {
+  width: 60%;
+  margin-left: 10px;
+  //   height: 40%;
+  background-color: orange;
+  select {
+    padding-right: 30px;
+    width: 20%;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+  textarea {
+    width: 80%;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+input[type="email"] {
+  width: 80%;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+input[type="text"] {
+  width: 56%;
+  margin-left: 15px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #797979;
+  color: white;
+  text-align: center;
+  height: 1.5em;
+}
