@@ -105,26 +105,32 @@ li {
 .box1 {
     background-image: url(../slike/1.jpg);
     @include slike_stanova;
+    width: 20%;
 }
 .box2 {
     background-image: url(../slike/2.jpg);
     @include slike_stanova;
+    width: 20%;
 }
 .box3 {
     background-image: url(../slike/3.jpg);
     @include slike_stanova;
+    width: 20%;
 }
 .box4 {
     background-image: url(../slike/4.jpg);
     @include slike_stanova;
+    width: 20%;
 }
 .box5 {
     background-image: url(../slike/5.jpg);
     @include slike_stanova;
+    width: 20%;
 }
 .box6 {
     background-image: url(../slike/6.jpg);
     @include slike_stanova;
+    width: 20%;
 }
 
 .sekcija_treca {
@@ -235,4 +241,64 @@ footer {
         color: $color_narandzasta;
         text-decoration: none;
     }
+}
+
+/* mobilni */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* tablet */
+@media only screen and (max-width: 992px) {
+   
+    .dobrodosli {
+        left: 20%;
+    }
+
+    .opis {
+        height: 60px;
+    }
+
+    .kapsula {        
+        &:first-child {
+            margin-left: 40%;
+        }
+    }
+
+    .box1 {
+        width: 45%;
+    }
+    .box2 {
+        width: 45%;
+    }
+    .box3 {
+        width: 45%;
+    }
+    .box4 {
+        width: 45%;
+    }
+    .box5 {
+        width: 45%;
+    }
+    .box6 {
+        width: 45%;
+    }
+
+    .mapa {
+
+        height:  800px;
+        iframe {
+            width: 50%;
+            height: 50%;
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+    }
+    
+    form {
+        width: 70%;
+        height: 40%;
+        margin: 2% 12%;
+    }
+
 }
