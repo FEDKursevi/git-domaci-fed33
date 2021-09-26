@@ -1,0 +1,32 @@
+@mixin slike_stanova {
+    width: 20%;
+    height: 350px;
+    background-size: 100%;
+    margin: 1%;
+    display: inline-block;
+    p{
+        background-color: $color_hover_stanovi;
+        padding: 10% 15% 20% 15%;
+        transform: scaleX(0);
+        transition: 0.2s;
+        font-weight: bolder;
+    }
+    &:hover .show{
+        transform: scaleX(1);
+    }
+    
+}
+
+@mixin tabela {
+    width: 60%;
+    height: 60%;
+    margin: 5% auto;
+    border-collapse: collapse;
+}
+
+@mixin footer{
+    background-color: $color_siva;
+    text-align: center;
+    padding: 1% 0%;
+    color: $color_font;
+}

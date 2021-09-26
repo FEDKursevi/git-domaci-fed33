@@ -1,9 +1,10 @@
 @import 'vars';
 @import 'mixin';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 *{
     margin: 0%;
+    font-family: $roboto_font;
 }
 
 ul {
@@ -12,35 +13,34 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: $color_siva;
-  }
+}
+
 li {
     float: left;
     width: 7%;
-    
     a {
         display: inline-block;
         color: $color_bela;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        font-family: $roboto_font;
 
         &:hover {
             text-decoration: underline;
-          }
-      }
+        }
+    }
     &:first-child {
         background-color: $color_narandzasta;
         text-decoration: underline;
         width: 20%;
     }
-
     img {
         width: 40px;
         padding: 1% 0% 1% 10%;
         float: left;
     }
 }
+
 .active {
     padding-left: 0%;
 }
@@ -50,6 +50,7 @@ li {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .dobrodosli {
     background-color: $color_opacity;
     display: inline-block;
@@ -58,11 +59,10 @@ li {
     margin-bottom: 10%;
     position: relative;
     left: 30%;
-    
     h1, p{
         color: $color_bela;
         text-align: center;
-        font-family: $roboto_font;
+        
     }
 }
 
@@ -71,6 +71,7 @@ li {
     background-color: $color_bela;
     height: 100px;
 }
+
 .kapsula {
     border: $kapsula_border;
     border-radius: 50px;
@@ -82,7 +83,6 @@ li {
         margin-left: 60%;
     }
     p {
-        font-family: $roboto_font;
         color: $color_font;
     }
     &:hover {
@@ -94,15 +94,145 @@ li {
 .pozadina {
     background-color: $color_pozadina_sekcija;
 }
+
 .slike_stana {
     width: 70%;
+    height: fit-content;
     margin: auto;
+    padding: 1%;
 }
-.box {
-    display: inline-block;
+
+.box1 {
+    background-image: url(../slike/1.jpg);
+    @include slike_stanova;
+}
+.box2 {
+    background-image: url(../slike/2.jpg);
+    @include slike_stanova;
+}
+.box3 {
+    background-image: url(../slike/3.jpg);
+    @include slike_stanova;
+}
+.box4 {
+    background-image: url(../slike/4.jpg);
+    @include slike_stanova;
+}
+.box5 {
+    background-image: url(../slike/5.jpg);
+    @include slike_stanova;
+}
+.box6 {
+    background-image: url(../slike/6.jpg);
+    @include slike_stanova;
+}
+
+.sekcija_treca {
+    text-align: center;
+    color: $color_font;
+    h3 {
+        
+        padding: 2% 0%;
+    }
+    p{
+        font-weight: 100;
+    }
+}
+
+table {
+    @include tabela;
+    th {
+        text-align: center;
+        border: 2px solid $color_font;
+        padding: 1% 3%;
+    }
+}
+
+.bg_tabe_one {
+    background-color: $color_narandzasta;
+    border: 2px solid $color_narandzasta;
+    color: $color_bela;
+}
+.bg_tabe_second {
+    background-color: $color_siva;
+    color: $color_bela;
+}
+
+.sekcija_cetvrta {
+    background-color: $color_pozadina_sekcija;
+    h3 {
+        text-align: center;
+        padding: 1%;
+        color: $color_font;
+    }
+}
+
+.mapa {
     width: 100%;
-    margin: 4% 2%;
-    img {
-        margin: 1%;
+    height: 400px;
+    padding: 3% 0%;
+    iframe {
+        width: 25%;
+        height: 100%;
+        padding-left: 15%;
+        padding-right: 5%;
+        display: inline-block;
+    }
+}
+
+form {
+    width: 40%;
+    height: 81%;
+    background-color: $color_narandzasta;
+    padding: 2%;
+    display: inline-block;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $color_border_form;
+    resize: vertical;
+    height: 100px;
+}
+
+.col-25 {
+    float: left;
+    width: 20%;
+    margin-top: 2%;
+}
+
+.col-95 {
+    float: left;
+    width: 95%;
+    margin-top: 2%;
+}
+
+.col-75 {
+    float: left;
+    width: 70%;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+footer {
+    @include footer;
+    a{
+        color: $color_narandzasta;
+        text-decoration: none;
     }
 }
