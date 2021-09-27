@@ -1,0 +1,146 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+@include main;
+
+.container {
+  margin: auto;
+  max-width: 100%;
+}
+
+#nav-bar {
+  color: $light-color;
+  overflow: auto;
+}
+
+.heading {
+  float: left;
+  width: 20%;
+  padding: 20px;
+  background-color: $bg-garish;
+
+  h1 {
+    font-size: 14px;
+
+    a {
+      color: $light-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav {
+float: right;
+width: 80%;
+padding: 20px;
+background-color: $bg-dark;
+
+  ul{
+    list-style: none;
+
+
+    li{
+      float: left;
+      padding-right: 55px;
+      padding-left: 20px;
+      font-size: 14px;
+      font-weight: bold;
+
+      a{
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        color: $light-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+#showcase {
+  background: url(../slike/intro.jpg) no-repeat center center/cover;
+  height: 600px;
+
+  .showcase-content {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 170px;
+    
+    .text-content {
+      display: inline-block;
+      background: $bg-dark;
+      opacity: 0.8;
+      padding: 0 150px;
+      margin: 235px 0 50px;
+      color: $light-color;
+    }
+
+    h1 {
+      background: $bg-dark;
+      font-size: 50px;
+      line-height: 1.2;
+      opacity: 1;
+    }
+
+    p {
+      line-height: 1.7em;
+    }
+  }
+}
+
+#tag-bar {
+  height: 80px;
+  margin-right: 220px;
+  
+  .btn {
+    float: right;
+    display: inline-block;
+    font-size: 14px;
+    color: $text-color;
+    background: $light-color;
+    margin: 20px;
+    padding: 10px 20px;
+    border: 1px solid $tag-btn-hover;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+    background: $bg-dark;
+    color: $light-color;
+  }
+  }
+}
+
+#images {
+  background: $bg-light;
+  overflow: auto;
+  height: 600px;
+
+  .img {
+   
+   width: 70%;
+   margin: 0 auto;
+  
+
+
+   .img-box {
+     float: left;
+     height: 180px;
+     width: 180px;
+     margin: 20px 0px;
+     
+    
+
+     img {
+       width: 80%;
+       
+     }
+   }
+  }
+}
+

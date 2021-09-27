@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  max-width: 100%;
+}
+
+#nav-bar {
+  color: #fff;
+  overflow: auto;
+}
+
+.heading {
+  float: left;
+  width: 20%;
+  padding: 20px;
+  background-color: #f75311;
+}
+.heading h1 {
+  font-size: 14px;
+}
+.heading h1 a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.nav {
+  float: right;
+  width: 80%;
+  padding: 20px;
+  background-color: #374249;
+}
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  float: left;
+  padding-right: 55px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.nav ul li a {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+}
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#showcase {
+  background: url(../slike/intro.jpg) no-repeat center center/cover;
+  height: 600px;
+}
+#showcase .showcase-content {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 170px;
+}
+#showcase .showcase-content .text-content {
+  display: inline-block;
+  background: #374249;
+  opacity: 0.8;
+  padding: 0 150px;
+  margin: 235px 0 50px;
+  color: #fff;
+}
+#showcase .showcase-content h1 {
+  background: #374249;
+  font-size: 50px;
+  line-height: 1.2;
+  opacity: 1;
+}
+#showcase .showcase-content p {
+  line-height: 1.7em;
+}
+
+#tag-bar {
+  height: 80px;
+  margin-right: 220px;
+}
+#tag-bar .btn {
+  float: right;
+  display: inline-block;
+  font-size: 14px;
+  color: #797979;
+  background: #fff;
+  margin: 20px;
+  padding: 10px 20px;
+  border: 1px solid #cfd1d3;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+#tag-bar .btn:hover {
+  background: #374249;
+  color: #fff;
+}
+
+#images {
+  background: #f3f7f9;
+  overflow: auto;
+  height: 600px;
+}
+#images .img {
+  width: 70%;
+  margin: 0 auto;
+}
+#images .img .img-box {
+  float: left;
+  height: 180px;
+  width: 180px;
+  margin: 20px 0px;
+}
+#images .img .img-box img {
+  width: 80%;
+}
+
+/*# sourceMappingURL=style.css.map */
