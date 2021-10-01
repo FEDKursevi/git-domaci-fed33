@@ -3,106 +3,97 @@
 
 @include main;
 
-.container {
-  margin: auto;
-  max-width: 100%;
-}
-
 #nav-bar {
-  color: $light-color;
-  overflow: auto;
-}
+  width: 100%;
+  height: 5em;
+  color: #fff;
 
-.heading {
-  float: left;
-  width: 20%;
-  padding: 20px;
-  background-color: $bg-garish;
+  .location, nav {
+    padding: 1em 2em;
+  }
 
-  h1 {
-    font-size: 14px;
+  .location {
+    height: 100%;
+    width: 20%;
+    float: left;
+    background: $bg-garish;
+    text-decoration: underline;
 
-    a {
-      color: $light-color;
+    img {
+      height: 100%;
+      float: left;
+    }
+
+    span {
+      font-size: 1.5em;
+      float: left;
+      margin-top: 0.3em;
       text-decoration: underline;
     }
   }
-}
 
-.nav {
-float: right;
-width: 80%;
-padding: 20px;
-background-color: $bg-dark;
+  nav {
+    float: right;
+    height: 100%;
+    width: 80%;
+    text-align: left;
+    background: $bg-dark;
 
-  ul{
-    list-style: none;
+    ul {
+      list-style: none;
+      padding-top: 0.8em;
 
+      li {
+        display: inline-block;
+        margin-right: 5em;
+        font-size: 1.2em;
 
-    li{
-      float: left;
-      padding-right: 55px;
-      padding-left: 20px;
-      font-size: 14px;
-      font-weight: bold;
+        a {
+          color: $light-color;
+          text-decoration: none;
 
-      a{
-        display: block;
-        text-align: left;
-        text-decoration: none;
-        color: $light-color;
-
-        &:hover {
-          text-decoration: underline;
+          &:hover { text-decoration: underline;}
         }
       }
     }
   }
 }
 
+section {
+	width: 100%;
+	padding: 3em 15%;
+	@include clearfix;
+}
+
 #showcase {
-  background: url(../slike/intro.jpg) no-repeat center center/cover;
   height: 600px;
+  background: url("../slike/intro.jpg");
+  background-size: cover;
 
-  .showcase-content {
+  h1, p {
+    color: $light-color;
+    font-weight: normal;
+    background: rgba(55, 66, 73, 0.6);
     text-align: center;
-    font-weight: bold;
-    padding-top: 170px;
-    
-    .text-content {
-      display: inline-block;
-      background: $bg-dark;
-      opacity: 0.8;
-      padding: 0 150px;
-      margin: 235px 0 50px;
-      color: $light-color;
-    }
+  }
 
-    h1 {
-      background: $bg-dark;
-      font-size: 50px;
-      line-height: 1.2;
-      opacity: 1;
-    }
-
-    p {
-      line-height: 1.7em;
-    }
+  h1 {
+    margin-top: 40%;
+    font-size: 4em;
   }
 }
 
 #tag-bar {
   height: 80px;
   margin-right: 220px;
-  
+  text-align: right;
+}
   .btn {
-    float: right;
-    display: inline-block;
     font-size: 14px;
     color: $text-color;
     background: $light-color;
-    margin: 20px;
-    padding: 10px 20px;
+    margin: 5px;
+    padding: 15px 30px;
     border: 1px solid $tag-btn-hover;
     border-radius: 25px;
     cursor: pointer;
@@ -110,37 +101,241 @@ background-color: $bg-dark;
     font-weight: bold;
 
     &:hover {
-    background: $bg-dark;
+    background: $tag-btn-hover;
     color: $light-color;
   }
   }
+
+
+
+.gallery {
+  background: $bg-light;
+  a { color: #000;}
 }
 
-#images {
-  background: $bg-light;
-  overflow: auto;
-  height: 600px;
+.offer {
+  width: 20%;
+  height: 300px;
+  float: left;
+  margin: 20px;
 
-  .img {
-   
-   width: 70%;
-   margin: 0 auto;
+  .offer-info {
+    display: none;
+    width: 100%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+
+    h3, h4 { color: #000; }
+    }
+    &:hover .offer-info { display: block; }
+
+    @for $i from 1 through 6 {
+      &.offer#{$i} {
+        background: url("../slike/#{$i}.jpg");
+        background-size: cover;
+      }
+  }
   
+}
 
+#contact-form, #pricing {
+	h2 {
+		font-size: 2em;
+		color: $bg-dark;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 1.5em;
+    font-weight: bold;
+	}
+}
 
-   .img-box {
-     float: left;
-     height: 180px;
-     width: 180px;
-     margin: 20px 0px;
-     
-    
+#pricing {
+  color: $text-color;
+  text-align: center;
 
-     img {
-       width: 80%;
-       
-     }
-   }
+  table {
+    width: 60%;
+    margin: 3em auto;
+    border-collapse: collapse;
+
+    th, td {
+			padding: .5em;
+		}
+
+    .head-cell {
+      background: $bg-garish;
+      color: $light-color;
+    }
+
+    .subhead-cell {
+      background: $bg-dark;
+      color: $light-color;
+      font-weight: bold;
+    }
+
+    thead {
+      .subhead-cell {
+        border-right: 1px solid $text-color;
+      }
+    }
+
+    tbody {
+      td {
+        border: 1px solid $text-color;
+      }
+    }
+  }
+
+  .pric-btn { display: none; }
+
+}
+
+#contact-form {
+  background: $bg-light;
+
+  .map {
+    float: left;
+    width: 30%;
+    margin: 20px;
+
+    iframe {
+      width: 100%;
+    }
+  }
+ 
+  form {
+    width: 60%;
+    float: right;
+    margin: 1em;
+    padding: 1em;
+    background: $bg-garish;
+
+    .contact-input {
+      float: left;
+      padding: 1em;
+      margin: 1em;
+      color: $bg-dark;
+      border: none;
+      font-weight: bold;
+    }
+
+    select { width: 20%; }
+
+    .contact-input[type="text"] {
+      float: right;
+      width: 70%;
+    }
+
+    .contact-input[type="email"] { width: 96%; }
+  
+    textarea.contact-input { width: 96%;}
+  }
+}
+
+#main-footer {
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  background: $bg-dark;
+  color: $light-color;
+  font-weight: bold;
+
+  a {
+    color: $bg-garish;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  
+  .offer {
+    width: 45%;
+  }
+
+  #pricing {
+    table { width: 100%; }
+  }
+
+  #contact-form {
+
+    .map {
+      width: 45%;
+      float: none;
+      margin: 1em auto;
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 670px) {
+
+  #nav-bar {
+    .location {
+      width: 100%;
+    }
+
+    nav {
+      width: 100%;
+      height: auto;
+
+      ul {
+        li {
+          width: 100%;
+          text-align: center;
+          padding: 1em;
+        }
+      }
+    }
+  }
+
+  section {
+    padding: 3em 1em;
+  }
+
+  #showcase {
+    background: #000;
+    height: auto;
+  
+    h1, p {
+      background: none;
+    }
+  }
+
+  .offer {
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+
+    .offer-info {
+      display: block;
+    }
+  }
+
+  #pricing {
+    table { display: none; }
+    .pric-btn {
+      display: inline-block;
+      margin-top: 2em;
+    }
+  }
+
+  #contact-form {
+    .map {
+      width: 80%;
+    }
+
+    form {
+      margin: 1em 0;
+
+      .contact-input, .contact-input[type="text"] {
+        width: 96%;
+        float: none;
+      }
+    }
   }
 }
 

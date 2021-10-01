@@ -7,123 +7,321 @@
   box-sizing: border-box;
 }
 
-.container {
-  margin: auto;
-  max-width: 100%;
-}
-
 #nav-bar {
+  width: 100%;
+  height: 5em;
   color: #fff;
-  overflow: auto;
 }
-
-.heading {
-  float: left;
+#nav-bar .location, #nav-bar nav {
+  padding: 1em 2em;
+}
+#nav-bar .location {
+  height: 100%;
   width: 20%;
-  padding: 20px;
-  background-color: #f75311;
+  float: left;
+  background: #f75311;
+  text-decoration: underline;
 }
-.heading h1 {
-  font-size: 14px;
+#nav-bar .location img {
+  height: 100%;
+  float: left;
 }
-.heading h1 a {
+#nav-bar .location span {
+  font-size: 1.5em;
+  float: left;
+  margin-top: 0.3em;
+  text-decoration: underline;
+}
+#nav-bar nav {
+  float: right;
+  height: 100%;
+  width: 80%;
+  text-align: left;
+  background: #374249;
+}
+#nav-bar nav ul {
+  list-style: none;
+  padding-top: 0.8em;
+}
+#nav-bar nav ul li {
+  display: inline-block;
+  margin-right: 5em;
+  font-size: 1.2em;
+}
+#nav-bar nav ul li a {
   color: #fff;
+  text-decoration: none;
+}
+#nav-bar nav ul li a:hover {
   text-decoration: underline;
 }
 
-.nav {
-  float: right;
-  width: 80%;
-  padding: 20px;
-  background-color: #374249;
+section {
+  width: 100%;
+  padding: 3em 15%;
 }
-.nav ul {
-  list-style: none;
+section:before, section:after {
+  content: "";
+  display: table;
 }
-.nav ul li {
-  float: left;
-  padding-right: 55px;
-  padding-left: 20px;
-  font-size: 14px;
-  font-weight: bold;
-}
-.nav ul li a {
-  display: block;
-  text-align: left;
-  text-decoration: none;
-  color: #fff;
-}
-.nav ul li a:hover {
-  text-decoration: underline;
+section:after {
+  clear: both;
 }
 
 #showcase {
-  background: url(../slike/intro.jpg) no-repeat center center/cover;
   height: 600px;
+  background: url("../slike/intro.jpg");
+  background-size: cover;
 }
-#showcase .showcase-content {
-  text-align: center;
-  font-weight: bold;
-  padding-top: 170px;
-}
-#showcase .showcase-content .text-content {
-  display: inline-block;
-  background: #374249;
-  opacity: 0.8;
-  padding: 0 150px;
-  margin: 235px 0 50px;
+#showcase h1, #showcase p {
   color: #fff;
+  font-weight: normal;
+  background: rgba(55, 66, 73, 0.6);
+  text-align: center;
 }
-#showcase .showcase-content h1 {
-  background: #374249;
-  font-size: 50px;
-  line-height: 1.2;
-  opacity: 1;
-}
-#showcase .showcase-content p {
-  line-height: 1.7em;
+#showcase h1 {
+  margin-top: 40%;
+  font-size: 4em;
 }
 
 #tag-bar {
   height: 80px;
   margin-right: 220px;
+  text-align: right;
 }
-#tag-bar .btn {
-  float: right;
-  display: inline-block;
+
+.btn {
   font-size: 14px;
   color: #797979;
   background: #fff;
-  margin: 20px;
-  padding: 10px 20px;
+  margin: 5px;
+  padding: 15px 30px;
   border: 1px solid #cfd1d3;
   border-radius: 25px;
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
 }
-#tag-bar .btn:hover {
-  background: #374249;
+.btn:hover {
+  background: #cfd1d3;
   color: #fff;
 }
 
-#images {
+.gallery {
   background: #f3f7f9;
-  overflow: auto;
-  height: 600px;
 }
-#images .img {
-  width: 70%;
-  margin: 0 auto;
+.gallery a {
+  color: #000;
 }
-#images .img .img-box {
+
+.offer {
+  width: 20%;
+  height: 300px;
   float: left;
-  height: 180px;
-  width: 180px;
-  margin: 20px 0px;
+  margin: 20px;
 }
-#images .img .img-box img {
-  width: 80%;
+.offer .offer-info {
+  display: none;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+}
+.offer .offer-info h3, .offer .offer-info h4 {
+  color: #000;
+}
+.offer:hover .offer-info {
+  display: block;
+}
+.offer.offer1 {
+  background: url("../slike/1.jpg");
+  background-size: cover;
+}
+.offer.offer2 {
+  background: url("../slike/2.jpg");
+  background-size: cover;
+}
+.offer.offer3 {
+  background: url("../slike/3.jpg");
+  background-size: cover;
+}
+.offer.offer4 {
+  background: url("../slike/4.jpg");
+  background-size: cover;
+}
+.offer.offer5 {
+  background: url("../slike/5.jpg");
+  background-size: cover;
+}
+.offer.offer6 {
+  background: url("../slike/6.jpg");
+  background-size: cover;
+}
+
+#contact-form h2, #pricing h2 {
+  font-size: 2em;
+  color: #374249;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+}
+
+#pricing {
+  color: #797979;
+  text-align: center;
+}
+#pricing table {
+  width: 60%;
+  margin: 3em auto;
+  border-collapse: collapse;
+}
+#pricing table th, #pricing table td {
+  padding: 0.5em;
+}
+#pricing table .head-cell {
+  background: #f75311;
+  color: #fff;
+}
+#pricing table .subhead-cell {
+  background: #374249;
+  color: #fff;
+  font-weight: bold;
+}
+#pricing table thead .subhead-cell {
+  border-right: 1px solid #797979;
+}
+#pricing table tbody td {
+  border: 1px solid #797979;
+}
+#pricing .pric-btn {
+  display: none;
+}
+
+#contact-form {
+  background: #f3f7f9;
+}
+#contact-form .map {
+  float: left;
+  width: 30%;
+  margin: 20px;
+}
+#contact-form .map iframe {
+  width: 100%;
+}
+#contact-form form {
+  width: 60%;
+  float: right;
+  margin: 1em;
+  padding: 1em;
+  background: #f75311;
+}
+#contact-form form .contact-input {
+  float: left;
+  padding: 1em;
+  margin: 1em;
+  color: #374249;
+  border: none;
+  font-weight: bold;
+}
+#contact-form form select {
+  width: 20%;
+}
+#contact-form form .contact-input[type=text] {
+  float: right;
+  width: 70%;
+}
+#contact-form form .contact-input[type=email] {
+  width: 96%;
+}
+#contact-form form textarea.contact-input {
+  width: 96%;
+}
+
+#main-footer {
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  background: #374249;
+  color: #fff;
+  font-weight: bold;
+}
+#main-footer a {
+  color: #f75311;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .offer {
+    width: 45%;
+  }
+
+  #pricing table {
+    width: 100%;
+  }
+
+  #contact-form .map {
+    width: 45%;
+    float: none;
+    margin: 1em auto;
+  }
+  #contact-form form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 670px) {
+  #nav-bar .location {
+    width: 100%;
+  }
+  #nav-bar nav {
+    width: 100%;
+    height: auto;
+  }
+  #nav-bar nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+  }
+
+  section {
+    padding: 3em 1em;
+  }
+
+  #showcase {
+    background: #000;
+    height: auto;
+  }
+  #showcase h1, #showcase p {
+    background: none;
+  }
+
+  .offer {
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+  }
+  .offer .offer-info {
+    display: block;
+  }
+
+  #pricing table {
+    display: none;
+  }
+  #pricing .pric-btn {
+    display: inline-block;
+    margin-top: 2em;
+  }
+
+  #contact-form .map {
+    width: 80%;
+  }
+  #contact-form form {
+    margin: 1em 0;
+  }
+  #contact-form form .contact-input, #contact-form form .contact-input[type=text] {
+    width: 96%;
+    float: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
